@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F9DFE8">
+<title>A little piece of my heart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+Garamond:ital,wght@0,600;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="fl" viewBox="0 0 40 40"><g fill="#F2B9CA" stroke="#D98CA7"><ellipse cx="20" cy="9" rx="6.5" ry="9"/><ellipse cx="20" cy="9" rx="6.5" ry="9" transform="rotate(72 20 20)"/><ellipse cx="20" cy="9" rx="6.5" ry="9" transform="rotate(144 20 20)"/><ellipse cx="20" cy="9" rx="6.5" ry="9" transform="rotate(216 20 20)"/><ellipse cx="20" cy="9" rx="6.5" ry="9" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="4.5" fill="#FFFDFB" stroke="#98566E"/></symbol>
+<symbol id="ht" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.800-8 11-8 11z" fill="#F9DFE8"/></symbol>
+</defs></svg>
+
+<!-- Scene 1: sealed envelope -->
+<section class="intro" id="intro" aria-label="Sealed envelope">
+  <span class="intro-sprig intro-sprig-left" aria-hidden="true">✿</span>
+  <span class="intro-sprig intro-sprig-right" aria-hidden="true">❀</span>
+  <p class="intro-eyebrow" data-c="intro.line"></p>
+  <button class="env" id="env1" aria-label="Open the envelope">
+    <span class="e-card hand" data-c="intro.card"></span><span class="e-front"></span><span class="e-flap"></span>
+    <span class="seal"><svg width="22" height="22"><use href="#ht"/></svg></span>
+  </button>
+  <h1>A little piece<br><em>of my heart.</em></h1>
+  <p class="intro-copy">A tiny world, made just for your day.</p>
+  <button class="btn" id="open1" data-c="intro.btn"></button>
+  <p class="intro-note">take your time · there's a little more inside</p>
+</section>
+
+<main>
+<!-- Scene 2: birthday -->
+<section class="scene hb" id="birthday">
+  <div class="petals" id="petals" aria-hidden="true"></div>
+  <div class="balloons" aria-hidden="true"><i></i><i></i><i></i></div>
+  <h1 data-c="birthday.title"></h1>
+  <p class="lead" data-c="birthday.line1"></p>
+  <div class="cake" role="group" aria-label="Birthday cake with three candles">
+    <div class="candles"><button class="candle" aria-label="Candle 1, tap to blow out"></button><button class="candle" aria-label="Candle 2, tap to blow out"></button><button class="candle" aria-label="Candle 3, tap to blow out"></button></div>
+    <div class="tier t2"></div><div class="tier t1"></div><div class="plate"></div>
+  </div>
+  <p class="hand" id="hint" data-c="birthday.hint"></p>
+  <div class="paper wish" id="wish" hidden aria-live="polite"><p class="hand big" data-c="birthday.cheer"></p><p data-c="birthday.line2"></p></div>
+  <a class="scroll" href="#memories" aria-label="Scroll to our memories">↓</a>
+</section>
+
+<!-- Scene 3: memories -->
+<section class="scene mem" id="memories">
+  <h2 data-c="memories.title"></h2>
+  <div class="paper note-card"><p data-c="appreciation.0"></p><p data-c="appreciation.1"></p></div>
+  <div class="gallery" id="gallery"></div>
+  <p class="hand big memline" data-c="memories.line"></p>
+  <div class="notes" id="notes"></div>
+</section>
+
+<!-- Scene 4: scratch cards -->
+<section class="scene scr" id="things">
+  <h2 data-c="scratch.title"></h2>
+  <div class="scratch" id="scratch"></div>
+</section>
+
+<!-- Scene 5: music -->
+<section class="scene lis" id="listen">
+  <div class="soundtrack-heading">
+    <p class="soundtrack-eyebrow">PRESS PLAY, IF YOU'D LIKE</p>
+    <h2>Something to <em>listen to.</em></h2>
+    <p>A little soundtrack, picked just for you.</p>
+  </div>
+  <div class="pl cass" id="music">
+    <div class="cassette">
+      <div class="cassette-label">
+        <span class="cassette-small">SIDE A · JUST FOR YOU</span>
+        <strong data-c="music.title"></strong>
+        <small data-c="music.artist"></small>
+      </div>
+      <div class="reels" aria-hidden="true"><span class="reel"></span><span class="tape-window"></span><span class="reel"></span></div>
+      <div class="cassette-bottom"><span>♡</span><span>PLAY ME WHENEVER</span><span>♡</span></div>
+    </div>
+    <div class="ctl">
+      <button class="pp" aria-label="Play">▶</button>
+      <div class="track-area"><div class="track-meta"><span>A song for your day</span><span class="time">0:00</span></div><input class="bar" type="range" min="0" max="100" step="0.1" value="0" aria-label="Song progress"></div>
+    </div>
+    <p class="msg" hidden data-c="music.missing"></p>
+  </div>
+
+</section>
+
+<!-- Scene 6: final letter -->
+<section class="scene fin" id="final">
+  <div class="envwrap" id="envwrap">
+    <p class="hand big" data-c="final.line"></p>
+    <button class="env" id="env2" aria-label="Open the envelope">
+      <span class="e-card"><svg width="30" height="30" aria-hidden="true"><use href="#fl"/></svg></span><span class="e-front"></span><span class="e-flap"></span>
+      <span class="seal"><svg width="22" height="22"><use href="#ht"/></svg></span>
+    </button>
+    <button class="btn" id="open2" data-c="final.btn"></button>
+  </div>
+  <article class="letter" id="letter" hidden>
+    <div id="letterBody"></div>
+    <p class="sign" data-c="final.sign"></p>
+    <svg class="stk" width="46" height="46" aria-hidden="true"><use href="#fl"/></svg>
+  </article>
+</section>
+</main>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" id="lbx" aria-label="Close photo">✕</button>
+  <button class="nv pv" id="lbp" aria-label="Previous photo">‹</button>
+  <img id="lbimg" alt="">
+  <p class="hand" id="lbcap"></p>
+  <button class="nv nx" id="lbn" aria-label="Next photo">›</button>
+</div>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
